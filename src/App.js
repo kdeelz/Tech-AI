@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CustomNavbar from './components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from './components/Home';
 
 
 function App() {
@@ -19,8 +20,5 @@ function App() {
   );
 }
 
-function Home() {
-  return <h1>Home Page</h1>;
-}
 
 export default App;
