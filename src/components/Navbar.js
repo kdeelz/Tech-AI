@@ -38,7 +38,7 @@ function CustomNavbar() {
                 Something else here
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
+            <Nav.Link href="#" >
               Link
             </Nav.Link>
           </Nav>
