@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from './Photos/logo.png';
+import { Link as ScrollLink } from 'react-scroll';
 
 function CustomNavbar() {
   return (
@@ -27,7 +28,18 @@ function CustomNavbar() {
             navbarScroll
           >
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/Contact">Contact</Nav.Link>
+            
+            {/* Replace Contact Link */}
+            <ScrollLink 
+              to="contact-section" 
+              smooth={true} 
+              duration={500} 
+              className="nav-link"
+              style={{ cursor: 'pointer' }}
+            >
+              Contact
+            </ScrollLink>
+
             <NavDropdown title="Services" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Services</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
@@ -35,12 +47,18 @@ function CustomNavbar() {
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">
-                Career Oportunitites 
+                Career Opportunities
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" >
-              About Us
-            </Nav.Link>
+            <ScrollLink 
+              to="about-section" 
+              smooth={true} 
+              duration={500} 
+              className="nav-link"
+              style={{ cursor: 'pointer' }}
+            >
+              About
+            </ScrollLink>
           </Nav>
           <Form className="d-flex">
             <Form.Control

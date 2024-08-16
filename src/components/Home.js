@@ -1,8 +1,10 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import { Link as ScrollLink } from 'react-scroll';
+import { Link as ScrollLink, Element } from 'react-scroll';
 import { motion } from 'framer-motion';
 import backgroundai from './Photos/Backgroundai.png';
+import Contact from './Contact'; // Import the Contact component
+import About from './About';
 import './css/Home.css';
 
 const Home = () => {
@@ -19,7 +21,7 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
               >
-                Welcome to AI Technology
+                Welcome to Tech AI
               </motion.h1>
               <motion.p
                 className="hero-text"
@@ -30,10 +32,12 @@ const Home = () => {
                 Pioneering the future with cutting-edge artificial intelligence solutions.
               </motion.p>
               <motion.div
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.04 }}
                 transition={{ duration: 0.3 }}
               >
-                <Button variant="primary" className="hero-button">Learn More</Button>
+                <ScrollLink to="contact-section" smooth={true} duration={500}>
+                  <Button variant="primary" className="hero-button">Contact Us</Button>
+                </ScrollLink>
               </motion.div>
             </Col>
             <Col md={6}>
@@ -60,8 +64,8 @@ const Home = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <h3 className="feature-title">Feature One</h3>
-                <p className="feature-text">Innovative AI-powered solutions to revolutionize industries.</p>
+                <h3 className="feature-title">Automation</h3>
+                <p className="feature-text">Implementing AI-driven automation to enhance efficiency in business processes.</p>
               </motion.div>
             </Col>
             <Col md={4}>
@@ -70,8 +74,8 @@ const Home = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <h3 className="feature-title">Feature Two</h3>
-                <p className="feature-text">Intelligent automation to streamline your business processes.</p>
+                <h3 className="feature-title">Data Analytics</h3>
+                <p className="feature-text">Utilizing AI for data processing, analysis, and actionable insights.</p>
               </motion.div>
             </Col>
             <Col md={4}>
@@ -80,14 +84,25 @@ const Home = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <h3 className="feature-title">Feature Three</h3>
-                <p className="feature-text">Data-driven insights for smarter decision-making.</p>
+                <h3 className="feature-title">AI Consulting</h3>
+                <p className="feature-text">Helping businesses integrate AI technologies into their operations.</p>
               </motion.div>
             </Col>
           </Row>
         </Container>
       </div>
 
+          {/* About Section */}
+          <Element name="about-section">
+        <About />
+      </Element>
+
+      {/* Contact Section */}
+      <Element name="contact-section">
+        <Contact />
+      </Element>
+
+  
       {/* Footer Section */}
       <footer className="footer">
         <Container>
