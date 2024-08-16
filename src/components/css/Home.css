@@ -1,0 +1,66 @@
+/* Home.css */
+
+.hero-section {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    padding: 100px 0;
+    text-align: left;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .hero-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  
+  .hero-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .features-section {
+    padding: 60px 0;
+  }
+  
+  .feature-box {
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-box:hover {
+    transform: scale(1.05);
+  }
+  
+  .feature-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .feature-text {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .scroll-link {
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  
