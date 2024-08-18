@@ -8,6 +8,7 @@ const Contact = () => {
     message: '',
   });
 
+  // Update form data on input change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -16,10 +17,40 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here (e.g., send the data to an API)
-    console.log('Form data submitted:', formData);
+  // Handle form submission
+  const onSubmit = async (event) => {
+    event.preventDefault();
+
+    // Prepare form data
+    const data = {
+      ...formData,
+      access_key: "b3db6fe5-225f-4060-863b-a4c19017ba77",  // Replace with your actual Web3Forms access key
+    };
+
+    // Send form data to the Web3Forms API
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: JSON.stringify(data),
+    });
+
+    const result = await res.json();
+
+    if (result.success) {
+      console.log("Success", result);
+      // Optionally, you can clear the form or show a success message
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+      });
+    } else {
+      console.log("Error", result);
+      // Handle error (show an error message, etc.)
+    }
   };
 
   return (
@@ -29,7 +60,7 @@ const Contact = () => {
           <Col md={8}>
             <h2 style={styles.contactTitle}>Contact Us</h2>
             <p style={styles.contactText}>Have questions or need support? Reach out to us using the form below.</p>
-            <Form onSubmit={handleSubmit} style={styles.contactForm}>
+            <Form onSubmit={onSubmit} style={styles.contactForm}>
               <Form.Group controlId="formName" style={styles.formGroup}>
                 <Form.Label>Name</Form.Label>
                 <Form.Control

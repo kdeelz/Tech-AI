@@ -1,66 +1,116 @@
 /* Home.css */
 
+
+/* Hero Section */
 .hero-section {
-    background-color: #0a0a0a;
-    color: #ffffff;
-    padding: 100px 0;
-    text-align: left;
-  }
-  
-  .hero-title {
-    font-size: 3rem;
-    font-weight: bold;
+  background-image: url('../Photos/backgroundai.jpg'); /* Replace with the correct path */
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 250px 0;
+  text-align: left;
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Add a dark overlay for better text contrast */
+  z-index: 1;
+}
+
+.hero-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+.hero-description {
+  margin-top: 30px;
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero-subtext {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+
+@media (max-width: 768px) {
+  .feature-box {
     margin-bottom: 20px;
   }
-  
-  .hero-text {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-  }
-  
-  .hero-button {
-    padding: 10px 20px;
-    font-size: 1rem;
-  }
-  
-  .hero-image {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  .features-section {
-    padding: 60px 0;
-  }
-  
-  .feature-box {
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .feature-box:hover {
-    transform: scale(1.05);
-  }
-  
-  .feature-title {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .feature-text {
-    font-size: 1rem;
-    color: #666;
-  }
-  
-  .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-  }
-  
-  .scroll-link {
-    cursor: pointer;
-    color: #ffffff;
-    text-decoration: underline;
-  }
-  
+}
+
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.scroll-link {
+  cursor: pointer;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.footer .social-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .social-links li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.footer .social-links a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer .social-links a:hover {
+  text-decoration: underline;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+

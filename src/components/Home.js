@@ -2,10 +2,10 @@ import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link as ScrollLink, Element } from 'react-scroll';
 import { motion } from 'framer-motion';
-import backgroundai from './Photos/Backgroundai.png';
 import Contact from './Contact'; // Import the Contact component
 import About from './About';
 import './css/Home.css';
+import Features from './Features';
 
 const Home = () => {
   return (
@@ -35,65 +35,24 @@ const Home = () => {
                 whileHover={{ scale: 1.04 }}
                 transition={{ duration: 0.3 }}
               >
+                
                 <ScrollLink to="contact-section" smooth={true} duration={500}>
                   <Button variant="primary" className="hero-button">Contact Us</Button>
                 </ScrollLink>
               </motion.div>
             </Col>
-            <Col md={6}>
-              <motion.img
-                src={backgroundai}
-                alt="backgroundai"
-                className="hero-image"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.6 }}
-              />
-            </Col>
+            
           </Row>
-        </Container>
+        </Container>  
       </div>
 
-      {/* Features Section */}
-      <div className="features-section">
-        <Container>
-          <Row>
-            <Col md={4}>
-              <motion.div
-                className="feature-box"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <h3 className="feature-title">Automation</h3>
-                <p className="feature-text">Implementing AI-driven automation to enhance efficiency in business processes.</p>
-              </motion.div>
-            </Col>
-            <Col md={4}>
-              <motion.div
-                className="feature-box"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <h3 className="feature-title">Data Analytics</h3>
-                <p className="feature-text">Utilizing AI for data processing, analysis, and actionable insights.</p>
-              </motion.div>
-            </Col>
-            <Col md={4}>
-              <motion.div
-                className="feature-box"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <h3 className="feature-title">AI Consulting</h3>
-                <p className="feature-text">Helping businesses integrate AI technologies into their operations.</p>
-              </motion.div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+       {/* Feature Section*/}
+       <Element name="features-section">
+        <Features/>
+      </Element>
 
-          {/* About Section */}
-          <Element name="about-section">
+      {/* About Section */}
+      <Element name="about-section">
         <About />
       </Element>
 
@@ -102,27 +61,47 @@ const Home = () => {
         <Contact />
       </Element>
 
-  
       {/* Footer Section */}
       <footer className="footer">
-        <Container>
-          <Row>
-            <Col md={6}>
-              <p>&copy; 2024 AI Technology. All rights reserved.</p>
-            </Col>
-            <Col md={6} className="text-md-right">
-              <ScrollLink
-                to="hero-section"
-                smooth={true}
-                duration={500}
-                className="scroll-link"
-              >
-                Back to top
-              </ScrollLink>
-            </Col>
-          </Row>
-        </Container>
-      </footer>
+  <Container>
+    <Row>
+      <Col md={4}>
+        <h5>About Us</h5>
+        <p>
+          Tech AI is at the forefront of AI innovation, dedicated to transforming businesses through intelligent solutions. We offer a range of services tailored to help companies leverage the power of artificial intelligence.
+        </p>
+      </Col>
+      <Col md={4}>
+        <h5>Contact Information</h5>
+        <p>Email: info@techaicompany.com</p>
+        <p>Phone: +1 (123) 456-7890</p>
+        <p>Address: 123 AI Drive, Innovation City, TechLand</p>
+      </Col>
+      <Col md={4}>
+        <h5>Follow Us</h5>
+        <ul className="social-links">
+          <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+        <ScrollLink
+          to="hero-section"
+          smooth={true}
+          duration={500}
+          className="scroll-link"
+        >
+          Back to top
+        </ScrollLink>
+      </Col>
+    </Row>
+    <Row className="mt-4">
+      <Col className="text-center">
+        <p>&copy; 2024 AI Technology. All rights reserved.</p>
+      </Col>
+    </Row>
+  </Container>
+</footer>
+
     </div>
   );
 };
