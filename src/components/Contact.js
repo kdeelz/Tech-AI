@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { motion } from 'framer-motion';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -10,7 +11,6 @@ const Contact = () => {
     message: '',
   });
 
-  // Update form data on input change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -19,17 +19,14 @@ const Contact = () => {
     });
   };
 
-  // Handle form submission
   const onSubmit = async (event) => {
     event.preventDefault();
 
-    // Prepare form data
     const data = {
       ...formData,
-      access_key: "b3db6fe5-225f-4060-863b-a4c19017ba77",  // Replace with your actual Web3Forms access key
+      access_key: "b3db6fe5-225f-4060-863b-a4c19017ba77",
     };
 
-    // Send form data to the Web3Forms API
     const res = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
@@ -42,81 +39,123 @@ const Contact = () => {
     const result = await res.json();
 
     if (result.success) {
-      // Show success toast notification
       toast.success('Message sent successfully!', {
-        position: "top-center",  // Position changed to string
-        autoClose: 3000, // Close after 3 seconds
+        position: "top-center",
+        autoClose: 3000,
       });
 
-      // Optionally, you can clear the form
       setFormData({
         name: '',
         email: '',
         message: '',
       });
     } else {
-      // Show error toast notification
       toast.error('Failed to send message. Please try again.', {
-        position: "top-center",  // Position changed to string
+        position: "top-center",
         autoClose: 3000,
       });
     }
   };
 
   return (
-    <div style={styles.contactSection}>
+    <motion.div
+      style={styles.contactSection}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+    >
       <Container>
         <Row className="justify-content-center">
-          <Col md={8}>
-            <h2 style={styles.contactTitle}>Contact Us</h2>
-            <p style={styles.contactText}>Have questions or need support? Reach out to us using the form below.</p>
-            <Form onSubmit={onSubmit} style={styles.contactForm}>
-              <Form.Group controlId="formName" style={styles.formGroup}>
-                <Form.Label>Name</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Enter your name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-              </Form.Group>
+          <Col md={6}>
+            <motion.h2
+              style={styles.contactTitle}
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
+            >
+              Let's talk about your Project
+            </motion.h2>
+            <motion.p
+              style={styles.contactText}
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.7, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              Have questions or need support? Reach out to us using the form below.
+            </motion.p>
+            <motion.div
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <Form onSubmit={onSubmit} style={styles.contactForm}>
+                <Form.Group controlId="formName" style={styles.formGroup}>
+                  <Form.Label>Name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter your name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
+                </Form.Group>
 
-              <Form.Group controlId="formEmail" style={styles.formGroup}>
-                <Form.Label>Email</Form.Label>
-                <Form.Control
-                  type="email"
-                  placeholder="Enter your email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </Form.Group>
+                <Form.Group controlId="formEmail" style={styles.formGroup}>
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="Enter your email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </Form.Group>
 
-              <Form.Group controlId="formMessage" style={styles.formGroup}>
-                <Form.Label>Message</Form.Label>
-                <Form.Control
-                  as="textarea"
-                  rows={5}
-                  placeholder="Type your message here"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                />
-              </Form.Group>
+                <Form.Group controlId="formMessage" style={styles.formGroup}>
+                  <Form.Label>Message</Form.Label>
+                  <Form.Control
+                    as="textarea"
+                    rows={5}
+                    placeholder="Type your message here"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                  />
+                </Form.Group>
 
-              <Button variant="primary" type="submit" style={styles.submitButton}>
-                Send Message
-              </Button>
-            </Form>
+                <Button variant="primary" type="submit" style={styles.submitButton}>
+                  Send Message
+                </Button>
+              </Form>
+            </motion.div>
+          </Col>
+
+          <Col md={6}>
+            <motion.div
+              style={styles.detailsContainer}
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.7, delay: 1}}
+              viewport={{ once: true }}
+            >
+              <h3 style={styles.detailsHeading}>Where expectations meet excellence!</h3>
+              <p style={styles.detailsText}>
+                Professional web design experts. Looking for inspiration, creative solutions, opportunities, adventures 
+                and most importantly a digital partner? You have come to the right place.
+              </p>
+            </motion.div>
           </Col>
         </Row>
       </Container>
       <ToastContainer />
-    </div>
+    </motion.div>
   );
 };
 
@@ -150,6 +189,23 @@ const styles = {
     width: '100%',
     padding: '10px',
     fontSize: '1rem',
+  },
+  detailsContainer: {
+    backgroundColor: '#fff',
+    padding: '30px',
+    borderRadius: '10px',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+  detailsHeading: {
+    fontSize: '67px',
+    marginBottom: '15px',
+  },
+  detailsText: {
+    fontSize: '1.2rem',
+    color: '#666',
   },
 };
 

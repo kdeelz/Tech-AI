@@ -1,18 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
 body {
   min-height: 100vh;
   background-size: cover;
   background-position: center;
 }
-
 .header {
   position: fixed;
   top: 0;
@@ -26,9 +23,8 @@ body {
   backdrop-filter: blur(10px);
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   z-index: 100;
-  background-color: rgba(0, 0, 0, 0.6); /* Add a dark overlay for better text contrast */
+  background-color: rgba(0, 0, 0, 0.6);
 }
-
 .header::before {
   content: "";
   position: absolute;
@@ -39,49 +35,39 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.4),
+    rgba(0, 0, 0, 0.4),
     transparent
   );
   transition: 0.5s;
 }
-
 .header:hover::before {
   left: 100%;
 }
-
 .logo {
   color: #bcbcbc;
   font-size: 25px;
   text-decoration: none;
   font-weight: 600;
   cursor: default;
+  
 }
-
-.navbar {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
 .navbar a {
-  color: #fff;
+  color: #ffffff;
   font-size: 15px;
+  font-weight: 100;
   text-decoration: none;
   margin-left: 35px;
   transition: 0.3s;
+  cursor: pointer;
 }
-
 .navbar a:hover {
   color: #f00;
 }
-
 #menu-icon {
   font-size: 36px;
   color: #fff;
   display: none;
-  cursor: pointer;
 }
-
 /* BREAKPOINTS */
 @media (max-width: 992px) {
   .header {
@@ -93,7 +79,6 @@ body {
   #menu-icon {
     display: block;
   }
-
   .navbar {
     position: absolute;
     top: 100%;
@@ -101,20 +86,15 @@ body {
     width: 100%;
     padding: 0.5rem 4%;
     display: none;
-    background-color: rgba(0, 0, 0, 0.6); /* Add a dark overlay for better text contrast */
-    flex-direction: column;
-    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
   }
-
   .navbar.active {
-    display: flex;
+    display: block;
   }
-
   .navbar a {
     display: block;
     margin: 1.5rem 0;
   }
-
   .nav-bg {
     position: absolute;
     top: 79px;
@@ -127,7 +107,6 @@ body {
     z-index: 99;
     display: none;
   }
-
   .nav-bg.active {
     display: block;
   }

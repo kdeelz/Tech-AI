@@ -8,10 +8,12 @@ import './css/Home.css';
 import Features from './Features';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import mind from './Photos/customermind.jpg';
-
+import Navbar from './Navbar';
 const Home = () => {
   return (
     <div>
+         {/* Navbar */}
+         <Navbar />
       {/* Hero Section */}
       <div className="hero-section">
       <Container>
@@ -53,11 +55,9 @@ const Home = () => {
                 <div>
                 
                 </div>
-                <p className="hero-image-text">
-                  
+                <a href="/new-page" className="hero-image-text"> 
                   What's on your mind?
-
-                </p>
+                </a>
                            
               </motion.div>
               <motion.div
@@ -94,7 +94,7 @@ const Home = () => {
   <Container>
     <Row>
       <Col md={4}>
-        <h5>About Us</h5>
+        <h5>Tech AI</h5>
         <p>
           Tech AI is at the forefront of AI innovation, dedicated to transforming businesses through intelligent solutions. We offer a range of services tailored to help companies leverage the power of artificial intelligence.
         </p>
