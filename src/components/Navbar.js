@@ -1,25 +1,31 @@
-
 import React, { useState } from 'react';
 import './css/Navbar.css';
+import 'boxicons/css/boxicons.min.css';
 
 const Navbar = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
-  const toggleMenu = () => setMenuOpen(!isMenuOpen);
+  const toggleMenu = () => {
+    setIsActive(!isActive);
+  };
 
   return (
-    <nav className="navbar">
-      <div className="logo">TechAI</div>
-      <button className="menu-toggle" onClick={toggleMenu}>
-        ☰
-      </button>
-      <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <header className="header">
+      <a href="/" className="logo">Tech AI</a>
+      
+      <i
+        className={`bx ${isActive ? 'bx-x' : 'bx-menu'}`}
+        id="menu-icon"
+        onClick={toggleMenu}
+      ></i>
+      <nav className={`navbar ${isActive ? 'active' : ''}`}>
+        <a href="/">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </nav>
+      
+    </header>
   );
 };
 

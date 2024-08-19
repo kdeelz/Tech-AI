@@ -1,9 +1,11 @@
-import './App.css';
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Home from './components/Home';
+import About from './components/About';
+
 
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path='/' element={<Home/>} />
+          
           {/* Add other routes here */}
         </Routes>
         

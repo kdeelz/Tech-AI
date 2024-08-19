@@ -1,31 +1,87 @@
-
+/* Features.css */
 .features-section {
-    padding: 60px 0;
-    background-color: #f7f7f7;
+  padding: 60px 0;
+  background-color: #f8f9fa; /* Light background color */
+  text-align: center; /* Center-align text */
+}
+
+/* Features.css */
+.features-section {
+  padding: 60px 0;
+  background-color: #f8f9fa; /* Light background color */
+  text-align: center; /* Center-align text */
+}
+
+.features-heading {
+  font-size: 2rem;
+  color: #333; /* Darker text color for the heading */
+  margin-bottom: 30px; /* Space below the heading */
+  position: relative;
+  display: inline-block; /* To apply animation effectively */
+}
+
+.features-heading::before {
+  content: '';
+  position: absolute;
+  bottom: -10px; /* Position it just below the heading */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: #007bff; /* Blue underline color */
+  transition: width 0.3s ease; /* Smooth transition for the underline */
+}
+
+.features-heading:hover::before {
+  width: 100%; /* Expand underline on hover */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .feature-box {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .feature-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .feature-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
-  .feature-text {
-    font-size: 1rem;
-    color: #666;
-  }
+}
+
+.features-heading {
+  animation: fadeInUp 1s ease-out;
+}
+
+.feature-box {
+  background: #fff; /* White background for feature boxes */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  transition: transform 0.3s ease; /* Smooth scale effect on hover */
+  text-align: center;
+  margin: 0 15px; /* Margin for carousel spacing */
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  color: #333; /* Darker text color for titles */
+  margin-bottom: 10px;
+}
+
+.feature-text {
+  font-size: 1rem;
+  color: #666; /* Slightly lighter text color for descriptions */
+}
+
+.feature-box:hover {
+  transform: scale(1.05); /* Scale up the feature box on hover */
+}
+
+/* Carousel dots styling */
+.slick-dots {
+  bottom: -30px; /* Position dots below carousel */
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 1; /* Ensure navigation buttons are above content */
+}

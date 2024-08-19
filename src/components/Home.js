@@ -6,13 +6,15 @@ import Contact from './Contact'; // Import the Contact component
 import About from './About';
 import './css/Home.css';
 import Features from './Features';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import mind from './Photos/customermind.jpg';
 
 const Home = () => {
   return (
     <div>
       {/* Hero Section */}
       <div className="hero-section">
-        <Container>
+      <Container>
           <Row className="align-items-center">
             <Col md={6}>
               <motion.h1
@@ -21,7 +23,7 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
               >
-                Welcome to Tech AI
+                Build Your Future With TECH AI
               </motion.h1>
               <motion.p
                 className="hero-text"
@@ -35,25 +37,51 @@ const Home = () => {
                 whileHover={{ scale: 1.04 }}
                 transition={{ duration: 0.3 }}
               >
-                
                 <ScrollLink to="contact-section" smooth={true} duration={500}>
-                  <Button variant="primary" className="hero-button">Contact Us</Button>
+                  <Button variant="primary" className="hero-button">Learn More...</Button>
                 </ScrollLink>
               </motion.div>
             </Col>
-            
+            <Col md={6} className="d-flex justify-content-center align-items-center">
+              <motion.div
+                className="hero-image-container"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+              >
+
+                <div>
+                
+                </div>
+                <p className="hero-image-text">
+                  
+                  What's on your mind?
+
+                </p>
+                           
+              </motion.div>
+              <motion.div
+                className="hero-prompt"
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                
+              </motion.div>
+            </Col>
           </Row>
-        </Container>  
+        </Container> 
       </div>
+
+       {/* About Section */}
+      <Element name="about-section">
+        <About />
+      </Element>
+
 
        {/* Feature Section*/}
        <Element name="features-section">
         <Features/>
-      </Element>
-
-      {/* About Section */}
-      <Element name="about-section">
-        <About />
       </Element>
 
       {/* Contact Section */}

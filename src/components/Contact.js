@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -40,16 +42,24 @@ const Contact = () => {
     const result = await res.json();
 
     if (result.success) {
-      console.log("Success", result);
-      // Optionally, you can clear the form or show a success message
+      // Show success toast notification
+      toast.success('Message sent successfully!', {
+        position: "top-center",  // Position changed to string
+        autoClose: 3000, // Close after 3 seconds
+      });
+
+      // Optionally, you can clear the form
       setFormData({
         name: '',
         email: '',
         message: '',
       });
     } else {
-      console.log("Error", result);
-      // Handle error (show an error message, etc.)
+      // Show error toast notification
+      toast.error('Failed to send message. Please try again.', {
+        position: "top-center",  // Position changed to string
+        autoClose: 3000,
+      });
     }
   };
 
@@ -105,6 +115,7 @@ const Contact = () => {
           </Col>
         </Row>
       </Container>
+      <ToastContainer />
     </div>
   );
 };

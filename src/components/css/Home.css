@@ -1,5 +1,10 @@
 /* Home.css */
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
 /* Hero Section */
 .hero-section {
@@ -8,7 +13,7 @@
   background-position: center;
   color: #ffffff;
   padding: 250px 0;
-  text-align: left;
+  text-align: right;
   position: relative;
 }
 
@@ -29,19 +34,21 @@
 }
 
 .hero-title {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 74px;
+  font-family: "Poppins", sans-serif;
   margin-bottom: 20px;
 }
 
 .hero-text {
   font-size: 1.2rem;
   margin-bottom: 30px;
+  
 }
 
 .hero-button {
   padding: 10px 20px;
   font-size: 1rem;
+ 
 }
 
 .hero-description {
@@ -57,6 +64,35 @@
 .hero-subtext {
   font-size: 1.1rem;
   margin-bottom: 15px;
+}
+
+.hero-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 400px; /* Adjust the max width as needed */
+  border-radius: 8px; /* Optional: Adds a rounded border to the image */
+}
+
+.hero-image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.hero-image-text {
+  font-size: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding-top: 30px;
 }
 
 
