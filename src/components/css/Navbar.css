@@ -35,10 +35,10 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(0, 0, 0, 0.4),
+    rgba(5, 122, 158, 0.4),
     transparent
   );
-  transition: 0.5s;
+  transition: 1s;
 }
 .header:hover::before {
   left: 100%;
@@ -48,7 +48,7 @@ body {
   font-size: 25px;
   text-decoration: none;
   font-weight: 600;
-  cursor: default;
+  cursor: pointer;
   
 }
 .navbar a {

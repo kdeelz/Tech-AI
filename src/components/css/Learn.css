@@ -1,0 +1,133 @@
+ 
+  .hero-section-learn {
+    background: url('../Photos/green2.png') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 250px 0;
+    text-align: right;
+    position: relative;
+    
+    
+  }
+
+  .hero-image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+.hero-title-learn{
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-subtitle-learn {
+    font-size: 20PX;
+    margin-bottom: 30px;
+   
+  }
+  
+  .hero-section Button {
+    font-size: 1.25rem;
+    padding: 12px 24px;
+  }
+  
+
+
+
+
+.learn-section {
+    padding: 0;
+    background-color: #f8f9fa;
+ 
+  
+  }
+  
+  .learn-title {
+    font-size:54px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    display: inline-block;
+    width: auto;
+    margin: 0 auto;
+  }
+  
+  .learn-text {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: justify;
+    
+  }
+  
+  .image-gallery {
+    margin-top: 40px;
+  }
+  
+  .gallery-item {
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    background-image: url('../Photos/wallpaper.jpg');
+  }
+  
+  .gallery-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .gallery-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .image-description {
+    font-size: 1rem;
+    color: #555;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .image-description h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .learn-details-text {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 40px;
+    text-align: justify;
+  }
+  
+  .contact-us-section {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .contact-us-button Button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    
+  }
+
+  .space {
+    padding-bottom: 20px;
+  }
+  

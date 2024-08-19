@@ -81,7 +81,7 @@ const Contact = () => {
               style={styles.contactText}
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.7, delay: 0.5 }}
+              transition={{ duration: 1, delay: 0.5 }}
               viewport={{ once: true }}
             >
               Have questions or need support? Reach out to us using the form below.
@@ -89,7 +89,7 @@ const Contact = () => {
             <motion.div
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.7, delay: 0.4 }}
+              transition={{ duration: 1, delay: 0.4 }}
               viewport={{ once: true }}
             >
               <Form onSubmit={onSubmit} style={styles.contactForm}>
@@ -142,7 +142,7 @@ const Contact = () => {
               style={styles.detailsContainer}
               initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.7, delay: 1}}
+              transition={{ duration: 1, delay: 1}}
               viewport={{ once: true }}
             >
               <h3 style={styles.detailsHeading}>Where expectations meet excellence!</h3>
@@ -150,6 +150,7 @@ const Contact = () => {
                 Professional web design experts. Looking for inspiration, creative solutions, opportunities, adventures 
                 and most importantly a digital partner? You have come to the right place.
               </p>
+              <a href="/" >Home</a>
             </motion.div>
           </Col>
         </Row>

@@ -26,10 +26,10 @@ const Navbar = () => {
         onClick={toggleMenu}
       ></i>
       <nav className={`navbar ${isActive ? 'active' : ''}`}>
-        <a href="hero-section" onClick={() => scrollToSection('hero-section')}>Home</a>
-        <a href="about-section" onClick={() => scrollToSection('about-section')}>About</a>
-        <a href="features-section" onClick={() => scrollToSection('features-section')}>Services</a>
-        <a href="contact-section" onClick={() => scrollToSection('contact-section')}>Contact</a>
+        <a href="/" >Home</a>
+        <a href="/learn" >About</a>
+        <a href="/services">Services</a>
+        <a href="/contact">Contact</a>
       </nav>
     </header>
   );

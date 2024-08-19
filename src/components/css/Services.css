@@ -1,0 +1,116 @@
+
+
+
+.services-section {
+    padding:  0;
+    background-color: #f8f9fa;
+  }
+  
+  .services-title {
+    font-size: 54px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    display: inline-block;
+    width: auto;
+    margin: 0 auto;
+  }
+  
+  .services-text {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  .service-gallery {
+    margin-top: 40px;
+  }
+  
+  .gallery-item {
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    background-image: url('../Photos/wallpaper.jpg'); /* Optional background for gallery items */
+  }
+  
+  .gallery-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .gallery-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .image-description {
+    font-size: 1rem;
+    color: #555;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .image-description h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .services-details-text {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 40px;
+    text-align: justify;
+  }
+  
+  .contact-us-section {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .contact-us-button {
+    display: inline-block;
+  }
+  
+  .contact-us-button Button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+  }
+  
+  .space {
+    padding-bottom: 20px;
+  }
+  
+  .hero-section-service {
+    background: url('../Photos/backgroundai.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 240px;
+    color: #fff;
+    text-align: center;
+  }
+  
+.hero-title-service{
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-subtitle-service {
+    font-size: 20PX;
+    margin-bottom: 30px;
+   
+  }
+  
+  .hero-section Button {
+    font-size: 1.25rem;
+    padding: 12px 24px;
+  }
+  

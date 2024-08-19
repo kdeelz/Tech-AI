@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import Slider from 'react-slick';
-import './css/Features.css'; // Assume you have some custom styles
+import './css/Features.css'; // Ensure you have some custom styles
 
 const Features = () => {
   // Slick Carousel settings
@@ -10,6 +10,8 @@ const Features = () => {
     dots: true,
     infinite: true,
     speed: 500,
+    autoplay: true,  // Enable autoplay
+    autoplaySpeed:1500,  // Set the speed of autoplay (in milliseconds)
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
