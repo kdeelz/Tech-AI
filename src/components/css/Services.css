@@ -34,7 +34,7 @@
     margin-bottom: 20px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
-    background-image: url('../Photos/wallpaper.jpg'); /* Optional background for gallery items */
+    background-image: url('../Photos/wallpaper.jpg');
   }
   
   .gallery-item:hover {

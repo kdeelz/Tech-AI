@@ -198,7 +198,7 @@ const Learn = () => {
       </Container>
 
       <div className='space'>
-        {/* This space can be adjusted or removed based on your layout needs */}
+        
       </div>
 
     </div>

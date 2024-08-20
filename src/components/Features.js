@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import Slider from 'react-slick';
-import './css/Features.css'; // Ensure you have some custom styles
+import './css/Features.css';
 
 const Features = () => {
   // Slick Carousel settings

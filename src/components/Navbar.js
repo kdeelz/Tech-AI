@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './css/Navbar.css';
+import './css/Navbar.css'
 import 'boxicons/css/boxicons.min.css';
 
 const Navbar = () => {

@@ -19,7 +19,6 @@ function App() {
           <Route path='/learn' element={<Learn/>} />
           <Route path='/services' element={<Services/>} />
           <Route path='/contact' element={<Contact/>} />
-          {/* Add other routes here */}
         </Routes>
         <Footer/>
       </Router>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link as ScrollLink } from 'react-scroll';
-import './css/Footer.css'; // Import the CSS file for footer
+import './css/Footer.css'; 
 
 const Footer = () => {
   return (
