@@ -13,9 +13,7 @@ import Navbar from './Navbar';
 const Home = () => {
   return (
     <div>
-         {/* Navbar */}
-         <Navbar />
-      {/* Hero Section */}
+  
       <div className="hero-section">
       <Container>
           <Row className="align-items-center">

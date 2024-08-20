@@ -27,14 +27,6 @@ const Footer = () => {
               <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
               <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
             </ul>
-            <ScrollLink
-              to="hero-section"
-              smooth={true}
-              duration={500}
-              className="scroll-link"
-            >
-              Back to top
-            </ScrollLink>
           </Col>
         </Row>
         <Row className="mt-4">

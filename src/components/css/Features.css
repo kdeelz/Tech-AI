@@ -83,5 +83,6 @@
 
 .slick-prev,
 .slick-next {
-  z-index: 1; /* Ensure navigation buttons are above content */
+  z-index: 1;
+   color: #007bff;/* Ensure navigation buttons are above content */
 }

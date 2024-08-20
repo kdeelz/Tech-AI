@@ -9,29 +9,24 @@ const Navbar = () => {
     setIsActive(!isActive);
   };
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <header className="header">
-      <a href="/" className="logo">Tech AI</a>
-
-      <i
-        className={`bx ${isActive ? 'bx-x' : 'bx-menu'}`}
-        id="menu-icon"
-        onClick={toggleMenu}
-      ></i>
-      <nav className={`navbar ${isActive ? 'active' : ''}`}>
-        <a href="/" >Home</a>
-        <a href="/learn" >About</a>
-        <a href="/services">Services</a>
-        <a href="/contact">Contact</a>
-      </nav>
-    </header>
+    <>
+      <header className="header">
+        <a href="/" className="logo">Tech AI</a>
+        <i
+          className={`bx ${isActive ? 'bx-x' : 'bx-menu'}`}
+          id="menu-icon"
+          onClick={toggleMenu}
+        ></i>
+        <nav className={`navbar ${isActive ? 'active' : ''}`}>
+          <a href="/">Home</a>
+          <a href="/learn">About</a>
+          <a href="/services">Services</a>
+          <a href="contact">Contact</a>
+        </nav>
+      </header>
+      <div className={`nav-bg ${isActive ? 'active' : ''}`}></div>
+    </>
   );
 };
 

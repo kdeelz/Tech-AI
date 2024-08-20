@@ -67,7 +67,7 @@ const Contact = () => {
     >
       <Container>
         <Row className="justify-content-center">
-          <Col md={6}>
+          <Col md={12} lg={6}>
             <motion.h2
               style={styles.contactTitle}
               initial={{ y: 50, opacity: 0 }}
@@ -137,7 +137,7 @@ const Contact = () => {
             </motion.div>
           </Col>
 
-          <Col md={6}>
+          <Col md={12} lg={6}>
             <motion.div
               style={styles.detailsContainer}
               initial={{ x: 100, opacity: 0 }}
@@ -145,12 +145,12 @@ const Contact = () => {
               transition={{ duration: 1, delay: 1}}
               viewport={{ once: true }}
             >
-              <h3 style={styles.detailsHeading}>Where expectations meet excellence!</h3>
+              <h3 style={styles.detailsHeading}>Where Expectations Meet Excellence!</h3>
               <p style={styles.detailsText}>
                 Professional web design experts. Looking for inspiration, creative solutions, opportunities, adventures 
                 and most importantly a digital partner? You have come to the right place.
               </p>
-              <a href="/" >Home</a>
+              <a href="/" style={styles.homeLink}>Home</a>
             </motion.div>
           </Col>
         </Row>
@@ -162,29 +162,31 @@ const Contact = () => {
 
 const styles = {
   contactSection: {
-    padding: '80px 0',
+    padding: '80px 20px',
     backgroundColor: '#f9f9f9',
+    
   },
+
   contactTitle: {
-    fontSize: '2.5rem',
+    fontSize: '2rem',
     fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: '20px',
   },
   contactText: {
-    fontSize: '1.2rem',
+    fontSize: '1rem',
     textAlign: 'center',
     marginBottom: '40px',
     color: '#666',
   },
   contactForm: {
     backgroundColor: '#fff',
-    padding: '30px',
+    padding: '20px',
     borderRadius: '10px',
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
   },
   formGroup: {
-    marginBottom: '20px',
+    marginBottom: '15px',
   },
   submitButton: {
     width: '100%',
@@ -193,7 +195,7 @@ const styles = {
   },
   detailsContainer: {
     backgroundColor: '#fff',
-    padding: '30px',
+    padding: '20px',
     borderRadius: '10px',
     height: '100%',
     display: 'flex',
@@ -201,13 +203,18 @@ const styles = {
     justifyContent: 'center',
   },
   detailsHeading: {
-    fontSize: '67px',
+    fontSize: '50px',
     marginBottom: '15px',
   },
   detailsText: {
-    fontSize: '1.2rem',
+    fontSize: '1rem',
     color: '#666',
   },
+  homeLink: {
+    color: '#007bff',
+    textDecoration: 'none',
+    fontSize: '1rem',
+  }
 };
 
 export default Contact;
