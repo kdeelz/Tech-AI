@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import { Element } from 'react-scroll';
-import Footer from './Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './css/Services.css'; // Ensure you have a CSS file for services
@@ -9,7 +7,6 @@ import consulting from './Photos/consulting.png';
 import innovation from './Photos/innovation.jpg';
 import plan from './Photos/plan.jpg';
 import auto from './Photos/automation.png';
-import Navbar from './Navbar';
 import { motion } from 'framer-motion';
 
 const Services = () => {
